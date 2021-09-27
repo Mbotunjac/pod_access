@@ -1,70 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Pod request access-landing page</title>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="HandheldFriendly" content="true"/>
-    <!-- displays site properly based on user's device -->
-​
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;900&display=swap" rel="stylesheet"/>
-    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Mentor | Pod request access landing page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
 </head>
 
-<body class="background-image">
-    <div class="wrapper">
+<body>
+    <div class="content">
+       <header>
             <div class="logo">
-                <img src="images/desktop/logo.svg" alt="pod">
+                <img src="/images/desktop/logo.svg" alt="logo">
             </div>
+        </header>
 
-        <main class="block">
-            <div class="cta">
-                <article>
-                    <h1> 
-                        Publish your podcasts <span> everywhere.</span>
-                    </h1>
-
-                    <p>
-                        Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!
-                    </p>
-                </article>
-            </div>
-
-            <div class="icons">
-                <img src="images/desktop/spotify.svg" alt="spotify"/>
-                <img src="images/desktop/apple-podcast.svg" alt="apple"/>
-                <img src="images/desktop/google-podcasts.svg" alt="google"/>
-                <img src="images/desktop/pocket-casts.svg" alt="pocket"/>
-            </div>
-
-            <div class="access">
-                <form id="form">
-                    <div class="form-control">
+        <div class="main">
+            <article>
+                <h1> <span class="green">Publish your podcasts</span><br>everywhere</h1>
+                <p> Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+            </article>
+        
+            <div class="">
+                <div class="brands">
+                    <div class="icons spotify"></div>
+                    <div class="icons apple"></div>
+                    <div class="icons google"></div>
+                    <div class="icons pocket"></div>
+                    <!--  <img src="assets/images/spotify.svg" alt="Spotify">
+                    <img src="assets/images/apple-podcast.svg" alt="Apple Podcast">
+                    <img src="assets/images/google-podcasts.svg" alt="Google Podcasts">
+                    <img src="assets/images/pocket-casts.svg" alt="Pocket Casts">
+                -->
+                </div>
+                <div class="access-form">
+                    <form id="form">
+                      <div class="form-control">
                         <input
-                            class="form-mail"
-                            title="mail"
-                            type="text"
-                            id="mail"
-                            placeholder="Email address"
+                          class="form__email"
+                          title="email"
+                          type="text"
+                          id="email"
+                          placeholder="Email address"
                         />
-                        <button type="submit" class="form-button">Request Access</button>
-                        <div><small>Error message</small></div>
-                    </div>
-                </form>
+                        <button type="submit" class="form__button">Request access</button>
+                        <div class="msg"><small></small></div>
+                      </div>
+                    </form>
+                  </div>
             </div>
-        </main>
-
+            <!------------------------------------------------------------------------------------------------------------------------------>
+        </div>
         <footer class="dots">
-            <img src="images/desktop/bg-pattern-dots.svg" 
-            alt=" " 
-            aria-hidden="true"
-            />   
-        </footer>
-    </div>   
+            <img
+              src="/images/desktop/bg-pattern-dots.svg"
+              alt=" "
+              aria-hidden="true"
+            />
+          </footer>  <!------------------------------------------------------------------------------------------------------------------------------>
+    </div>
+
 </body>
 
+<script src="script.js">  </script>
 
 </html>
