@@ -1,4 +1,27 @@
-// Simple Check to validate form.
+
+/*function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+  
+  function validate() {
+    const $result = $("#result");
+    const email = $("#email").val();
+    $result.text("");
+  
+    if (validateEmail(email)) {
+      $result.text(email + " is valid :)");
+      $result.css("color", "green");
+    } else {
+      $result.text(email + " is not valid :(");
+      $result.css("color", "red");
+    }
+    return false;
+  }
+  
+  $("#email").on("input", validate);
+*/
+
 
 const email = document.getElementById("email");
 const form = document.querySelector("form");
@@ -11,8 +34,8 @@ function showError(input, message) {
   small.innerText = message;
 }
 
-function checkEmail() {
-  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+function validateEmail() {
+  var filter = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (email.value === "") {
     showError(email, "Oops! Please add your email");
   } else if (!filter.test(email.value)) {
@@ -22,9 +45,10 @@ function checkEmail() {
   }
 }
 
-// Evenlistener
+// Eventlistener
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   emailInput = email.value;
-  checkEmail();
+  validateEmail();
 });
+

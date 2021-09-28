@@ -5,28 +5,40 @@
     padding: 0;
 }
 
+:root {
+     /* Colors */
+     --dark-grey:  #121725;
+     --grey: #2C344B;
+     --light-grey: #5A668A;
+     --light-blue: #C2CBE5;
+     --white: #FFFFFF;
+     --light-green: #54E6AF;
+     --bright-green: #B3FFE2; /*hover green*/
+     --red : #FB3E3E;
+
+}
+
 body,
 html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #121725;
+    background-color: var(--dark-grey);
 }
 
 body {
     font-family: 'Chivo', sans-serif;
- background-color: #121725;
-    color: #C2CBE5;
+    color: var(--light-blue);
     box-sizing: border-box;
-    background-image: url("/images/desktop/image-host.jpg") right center no-repeat;
+    background-image: url("/images/desktop/image-host.jpg");
     background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover; 
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (max-width:768px) {
     body {
-        background: url("/images/tablet/image-host.jpg") right top no-repeat, url("../images/bg-pattern-dots.svg") left bottom no-repeat;
+        background: url("/images/tablet/image-host.jpg") right top no-repeat/*, url("../images/bg-pattern-dots.svg") left bottom no-repeat*/;
         background-size: unset;
         background-blend-mode: normal;
     }
@@ -38,13 +50,23 @@ body {
     }
 } 
 
-.content {
-    flex: 1 0 auto;
-    padding-left: 24px;
-    padding-right: 24px;
+@media only screen and (max-width:400px) {
+    body {
+        background-image: linear-gradient(to bottom, hsla(224, 35%, 11%, 0.9), hsla(224, 35%, 11%, 0.9)), url("./images/mobile/image-host.jpg");
+
+    }
 }
 
-/*------------------------------------------------------------------------------------------------------------------*/
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey-black);
+    margin: 0 5.875rem 16.0625rem 2.4375rem;
+
+    flex: 1 0 auto;
+    padding-left: 24px;
+    padding-right: 24px; 
+}
 
 .logo img {
     width: 135px;
@@ -52,7 +74,7 @@ body {
 }
 
 .logo {
-    text-align: center;
+    text-align: left;
     margin-top: 62px;
     margin-bottom: 57px;
 }
@@ -63,128 +85,128 @@ body {
     margin-top: 50px;
     margin-bottom: 152px;
 }
-}
+} 
 
 @media only screen and (min-width:1440px) {
 .logo {
     margin-top: 102px;
     margin-bottom: 103px;
 }
-}
-
-
-/*------------------------------------------------------------------------------------------------------------------*/
-
-h1 {
-font-size: 26px;
-line-height: 38px;
-text-transform: uppercase;
-font-weight: 300;
-color: white;
-margin-bottom: 16px;
-}
-
-.green {
-color: #54E6AF;
-}
+} 
 
 .main {
-text-align: center;
+    text-align: center;
+    }
+
+.info h1 {
+    font-size: 52px;
+    line-height: 62px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 24px;
 }
 
-p {
-font-size: 15px;
-line-height: 25px;
-font-weight: 300;
-margin-bottom: 33px;
+.info h1 span {
+    color: var(--light-green);
+}
+
+.info p {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+    margin-bottom: 40px;
 }
 
 .brands {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-align-content: center;
-margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 48px;
 }
 
 .icons {
-background-repeat: no-repeat;
-width: 100%;
-padding-top: 17%;
-background-position: center;
-background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 17%;
+    background-position: center;
+    background-size: contain;
 }
 
 .icons.spotify {
-background-image: url("/images/desktop/spotify.svg");
-margin-right: 23px;
+    background-image: url("/images/desktop/spotify.svg");
+    margin-right: 40px;
 }
 
 .icons.apple {
-background-image: url("/images/desktop/apple-podcast.svg");
-margin-right: 25px;
+    background-image: url("/images/desktop/apple-podcast.svg");
+    margin-right: 41px;
 }
 
 .icons.google {
-background-image: url("/images/desktop/google-podcasts.svg");
-margin-right: 16px;
+    background-image: url("/images/desktop/google-podcasts.svg");
+    margin-right: 27px;
 }
 
 .icons.pocket {
-background-image: url("/images/desktop/pocket-casts.svg");
+    background-image: url("/images/desktop/pocket-casts.svg");
 }
 
 .access-form {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 input[type=text] {
-width: 100%;
-padding: 9px 32px;
-box-sizing: border-box;
-border-radius: 28px;
-border: none;
-line-height: 28px;
-background-color: #2C344B;
-color: rgba(255, 255, 255, 0.5);
-font-size: 14px;
-max-width: 427px;
+    width: 100%;
+    padding: 9px 32px;
+    box-sizing: border-box;
+    border-radius: 28px;
+    border: none;
+    line-height: 28px;
+    background-color: var(--grey);
+    color: var(--white);
+    font-size: 14px;
+    max-width: 427px;
 }
 
 button {
-width: 100%;
-margin-top: 16px;
-height: 46px;
-background-color: #54E6AF;
-color: #121725;
-border: none;
-border-radius: 26px;
-cursor: pointer;
-font-size: 14px;
-font-weight: 700;
-max-width: 427px;
+    width: 100%;
+    margin-top: 16px;
+    height: 46px;
+    background-color: var(--light-green);
+    color: var(--dark-grey);
+    border: none;
+    border-radius: 28px;
+    cursor: pointer; 
+    font-size: 14px;
+    font-weight: 700;
+    max-width: 427px;
 }
 
 button:hover {
-background-color: #B3FFE2;
+    background-color: var(--bright-green);
 }
 
 .msg {
-    color: red;
+    color: var(--red);
 }
 
-/*.footer {
-    left: unset;
+/*@media only screen and (min-width:1400px) {
+.dots {
+    margin-right: 0px;
+    /*left: unset; 
     right: 0px;
-    bottom: 4.6875rem; 
-}*/
+    bottom: 78px; 
+}
+} */
 
 
 @media only screen and (min-width:768px) {
 .main {
-    background-color: #121725;
+    background-color: var(--dark-grey);
     width: 635px;
     padding-top: 93px;
     text-align: left;
@@ -224,11 +246,9 @@ form {
 }
 
 
-/*------------------------------------------------------------------------------------------------------------------*/
-
 @media only screen and (min-width:1200px) {
 .main {
-    background-color: #121725;
+    background-color: var(--dark-grey);
     width: 723px;
     padding-top: 88px;
 }
