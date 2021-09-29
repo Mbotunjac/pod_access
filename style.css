@@ -32,7 +32,7 @@ body {
     background: var(--dark-grey);
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     body {
         background-image: url("/images/tablet/image-host.jpg");
         background-position: top right;
@@ -58,15 +58,55 @@ body {
     }  
 }
 
-@media only screen and (max-width:400px) {
+@media only screen and (max-width: 400px) {
     .content {
         background-image: linear-gradient(to bottom, hsla(224, 35%, 11%, 0.9), hsla(224, 35%, 11%, 0.9)), url("./images/mobile/image-host.jpg");
         background-size: cover;
     }
 
+    .main{
+        text-align: center;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+    }
+
+    .info {
+        order: 1;
+    }
+
+    .access-form {
+        order: 3;
+    }
+
+    .brands {
+        order: 2;
+        max-height: 11.063rem;
+        max-width: 19.688rem;
+        color: var(--grey);
+    }
+
     .dots {
-        position: relative;
-        visibility: hidden;
+      /*  position: relative;
+        bottom: 0px; */
+        display: none;
+    }
+
+    .logo {
+         text-align: center;
+    }
+
+    h1 {
+        font-size: 26px;
+        line-height: 38px;
+    }
+
+    .paragraph {
+        font-size: 15px;
+        line-height: 25px;
     }
 }
 
@@ -84,7 +124,7 @@ body {
     text-align: center;
     }
 
-.info h1 {
+h1 {
     font-size: 52px;
     line-height: 62px;
     text-transform: uppercase;
@@ -93,11 +133,11 @@ body {
     margin-bottom: 24px;
 }
 
-.info h1 span {
+h1 span {
     color: var(--light-green);
 }
 
-.info p {
+.paragraph {
     font-size: 18px;
     line-height: 28px;
     font-weight: 300;
@@ -195,10 +235,6 @@ button:hover {
         text-align: left;
     } 
 
-    .logo {
-        text-align: left; 
-    }
-
     h1 {
         font-size: 48px;
         line-height: 56px;
@@ -217,7 +253,7 @@ button:hover {
         flex-direction: column-reverse;
     }
 
-    p {
+    .paragraph {
         margin-bottom: 40px;
         font-size: 18px;
         line-height: 28px;
@@ -239,7 +275,6 @@ button:hover {
     }
 } 
 
-
 @media only screen and (min-width:1200px) {
     .main {
         background-color: var(--dark-grey);
@@ -247,16 +282,10 @@ button:hover {
         padding-top: 88px;
     }
 
-    h1 {
-        font-size: 52px;
-        line-height: 62px;
-        margin-bottom: 24px;
-    }
-
     .content {
         margin-left: 165px;
     }
-
+    
     form {
         margin-bottom: 64px;
     }
