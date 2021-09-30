@@ -116,6 +116,10 @@ body {
         font-size: 15px;
         line-height: 25px;
     }
+
+    .access-form {
+        flex-direction: column-reverse;
+    }
 }
 
 .logo img {
@@ -260,10 +264,6 @@ button:hover {
         width: 536px;
     }
 
-    .access-form {
-        flex-direction: column-reverse;
-    }
-
     .paragraph {
         margin-bottom: 40px;
         font-size: 18px;
@@ -301,8 +301,3 @@ button:hover {
         margin-bottom: 64px;
     }
 }
-
-    
-
-
-  
