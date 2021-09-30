@@ -1,9 +1,6 @@
-
-
 const email = document.getElementById("email");
 const form = document.querySelector("form");
 
-// Function
 function showError(input, message) {
   const formControl = input.parentElement;
   formControl.className = "form-control error";
@@ -22,10 +19,8 @@ function validateEmail() {
   }
 }
 
-// Eventlistener
 form.addEventListener("submit", function (e) {
   e.preventDefault();
   emailInput = email.value;
   validateEmail();
 });
-

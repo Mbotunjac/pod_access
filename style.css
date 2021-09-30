@@ -63,15 +63,6 @@ body {
     } 
 } 
 
-@media only screen and (min-width: 769px) {
-    .content {
-        background-image: url("/images/desktop/image-host.jpg");
-        background-position: top 8.125rem right;
-        background-size: 55.5rem;
-        background-repeat: no-repeat;
-    }  
-}
-
 @media only screen and (max-width: 400px) {
     .content {
         background-image: linear-gradient(to bottom, hsla(224, 35%, 11%, 0.9), hsla(224, 35%, 11%, 0.9)), url("./images/mobile/image-host.jpg");
@@ -99,6 +90,7 @@ body {
         order: 2;
         max-height: 1.063rem;
         max-width: 19.688rem;
+        margin: auto 5%;
     }
 
     .icons {
@@ -147,8 +139,6 @@ body {
 }
 
 .paragraph {
-  /*  font-size: 18px;
-    line-height: 28px;  */
     font-weight: 300;
     margin-bottom: 40px;
 }
@@ -230,6 +220,13 @@ button:hover {
 }
 
 @media only screen and (min-width: 769px) {
+    .content {
+        background-image: url("/images/desktop/image-host.jpg");
+        background-position: top 8.125rem right;
+        background-size: 55.5rem;
+        background-repeat: no-repeat;
+    }  
+
     .dots {
         position: relative;
         bottom: 23vh; left: 69.5vw;
