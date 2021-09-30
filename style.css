@@ -37,7 +37,6 @@ body {
         background-image: url("/images/tablet/image-host.jpg");
         background-position: top right;
         background-size: 30.687rem 47.938rem; 
-     /* background-size: contain; */
         background-repeat: no-repeat; 
     }
 
@@ -45,8 +44,23 @@ body {
         position: relative;
         max-width: 39.688rem;
         max-height: 31.813rem;
-        margin-bottom: 16.063rem; 
+        margin-bottom: 9.563rem; 
     }
+
+    .publish {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .paragraph {
+        font-size: 18px;
+        line-height: 28px;
+    } 
+
+    .logo {
+        margin-top: 50px;
+        margin-bottom: 152px; 
+    } 
 } 
 
 @media only screen and (min-width: 769px) {
@@ -71,7 +85,6 @@ body {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-
     }
 
     .info {
@@ -84,12 +97,12 @@ body {
 
     .brands {
         order: 2;
-        max-height: 11.063rem;
+        max-height: 1.063rem;
         max-width: 19.688rem;
     }
 
     .icons {
-        max-height: 11.063rem;
+        max-height: 1.063rem; 
     }
 
     .dots {
@@ -97,7 +110,9 @@ body {
     }
 
     .logo {
-         text-align: center;
+        text-align: center;
+        margin-top: 62px;
+        margin-bottom: 57px; 
     }
 
     .publish {
@@ -116,18 +131,11 @@ body {
     height: 56px;
 }
 
-.logo {
-    margin-top: 102px;
-    margin-bottom: 103px; 
-}
-
 .main {
     text-align: center;
     }
 
 .publish {
-    font-size: 52px;
-    line-height: 62px;
     text-transform: uppercase;
     font-weight: 300;
     color: var(--white);
@@ -139,8 +147,8 @@ body {
 }
 
 .paragraph {
-    font-size: 18px;
-    line-height: 28px;
+  /*  font-size: 18px;
+    line-height: 28px;  */
     font-weight: 300;
     margin-bottom: 40px;
 }
@@ -226,6 +234,17 @@ button:hover {
         position: relative;
         bottom: 23vh; left: 69.5vw;
     } 
+
+    .publish {
+        font-size: 52px;
+        line-height: 62px;
+        margin-bottom: 31px;
+    }
+
+    .logo {
+        margin-top: 102px;
+        margin-bottom: 103px; 
+    } 
 } 
 
 @media only screen and (min-width:768px) {  
@@ -235,12 +254,6 @@ button:hover {
         padding-top: 93px;
         text-align: left;
     } 
-
-    .publish {
-        font-size: 48px;
-        line-height: 56px;
-        margin-bottom: 31px;
-    }
 
     .content {
         margin-left: 39px;
@@ -259,7 +272,7 @@ button:hover {
         font-size: 18px;
         line-height: 28px;
         max-width: 445px;
-    }
+    } 
 
     button {
         width: 162px;
@@ -291,6 +304,8 @@ button:hover {
         margin-bottom: 64px;
     }
 }
+
+    
 
 
   
